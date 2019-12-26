@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace CDS002.IEnumerableWithGenericsDemo
 {
@@ -20,43 +21,87 @@ namespace CDS002.IEnumerableWithGenericsDemo
             TestStreamReaderEnumerable(keyString);
 
             Console.ReadKey();
-        }
 
-        /// <summary>
-        /// 不使用自定义的迭代子检索指定的文本文件中，包含指定字符串的个数的方法
-        /// </summary>
-        /// <param name="keyString"></param>
-        public static void TestReadingFile(string keyString)
+        }
+ 
+
+        static void TestReadingFile(string key)
         {
             var memoryBefore = GC.GetTotalMemory(true);
             StreamReader sr;
             try
             {
-                sr = File.OpenText("C://Users//liuxf//Desktop//人工智能.txt");
+                sr = File.OpenText("/Users/lzzy/Desktop/SuanFa/tempFile.txt");
             }
             catch (FileNotFoundException)
             {
-                Console.WriteLine(@"C://Users//liuxf//Desktop//人工智能.txt");
+                Console.WriteLine(@"这个例子需要一个名为 tempFile.txt 的文件。");
                 return;
             }
-            var fileContents = new List<string>(); // 将文本内容添加到一个 List<string> 变量
-            while (!sr.EndOfStream)
+            var result = new List<string>();
+            string errorChar = "。！";
+            Regex regex = new Regex(string.Format("{0}[^{1}]*", key, key.Substring(0, 1) + errorChar));
+            Console.WriteLine("--------------------------");
+            Console.WriteLine(string.Format("“{0}”已找到{1}个结果：", key, regex.Matches(sr.ReadToEnd()).Count));
+            Console.WriteLine("--------------------------");
+            string lineString = "";
+            int lineIndex = 0;
+            sr.BaseStream.Seek(0, SeekOrigin.Begin);
+            while (!string.IsNullOrEmpty((lineString = sr.ReadLine())))
             {
-                fileContents.Add(sr.ReadLine());
+                lineIndex++;
+                int searchIndex = 0;
+                foreach (var item in regex.Matches(lineString))
+                {
+                    var regexResult = item.ToString();
+                    searchIndex = lineString.IndexOf(key, searchIndex) + 1;
+                    result.Add(regexResult);
+                    Console.WriteLine("第" + lineIndex + "行，第" + searchIndex + "个字母开始：" + regexResult);
+                   
+                }
             }
-
-            // 检索目标文本（字符串）
-            var stringsFound =
-                from line in fileContents
-                where line.Contains(keyString)
-                select line;
-
-            sr.Close();
-            Console.WriteLine("数量：" + stringsFound.Count());
-
-            var memoryAfter = GC.GetTotalMemory(false); // 检查不使用迭代子并将结果输出到控制台之后的内存用量.
-            Console.WriteLine("不使用 Iterator 的内存用量 = \t" + string.Format(((memoryAfter - memoryBefore) / 1000).ToString(), "n") + "kb");
         }
+
+
+        /// <summary>
+        /// 不使用自定义的迭代子检索指定的文本文件中，包含指定字符串的个数的方法
+        /// </summary>
+        /// <param name="keyString"></param>
+        //public static void TestReadingFile(string keyString)
+        //{
+        //    var memoryBefore = GC.GetTotalMemory(true);
+        //    StreamReader sr;
+        //    try
+        //    {
+        //        sr = File.OpenText("/Users/lzzy/Desktop/CDS002.IEnumerableWithGenericsDemo/tempFile.txt");
+        //    }
+        //    catch (FileNotFoundException)
+        //    {
+        //        Console.WriteLine(@"这个例子需要一个名为 tempFile.txt 的文件。");
+        //        return;
+        //    }
+        //    var fileContents = new List<string>(); // 将文本内容添加到一个 List<string> 变量
+        //    while (!sr.EndOfStream)
+        //    {
+        //        fileContents.Add(sr.ReadLine());
+        //    }
+
+        //    // 检索目标文本（字符串）
+        //    var stringsFound =
+        //        from line in fileContents
+        //        where line.Contains(keyString)
+        //        select line;
+
+        //    sr.Close();
+        //    Console.WriteLine("数量：" + stringsFound.Count());
+
+
+        //var memoryAfter = GC.GetTotalMemory(false); // 检查不使用迭代子并将结果输出到控制台之后的内存用量.
+        //    Console.WriteLine("不使用 Iterator 的内存用量 = \t" + string.Format(((memoryAfter - memoryBefore) / 1000).ToString(), "n") + "kb");
+        //}
+
+
+
 
         /// <summary>
         /// 使用迭代子方式检索指定的文本文件中，包含指定字符串的个数的方法
@@ -70,19 +115,19 @@ namespace CDS002.IEnumerableWithGenericsDemo
             try
             {
                 stringsFound =
-                      from line in new StreamReaderEnumerable("C://Users//liuxf//Desktop//人工智能.txt")
+                      from line in new StreamReaderEnumerable(@"/Users/lzzy/Desktop/SuanFa/tempFile.txt")
                       where line.Contains(keyString)
                       select line;
                 Console.WriteLine("数量：" + stringsFound.Count());
             }
             catch (FileNotFoundException)
             {
-                Console.WriteLine(@"C://Users//liuxf//Desktop//人工智能.txt");
+                Console.WriteLine(@"这个例子需要一个名为 C:\temp\tempFile.txt 的文件。");
                 return;
             }
 
             var memoryAfter = GC.GetTotalMemory(false); // 检查使用迭代子并将结果输出到控制台之后的内存用量。
-            Console.WriteLine("使用 Iterator 的内存用量 = \t" + string.Format(((memoryAfter - memoryBefore) / 1000).ToString(), "n") + "kb");
+            Console.WriteLine("使用 Iterator 的内存用量 = \t"+ string.Format(((memoryAfter - memoryBefore) / 1000).ToString(), "n") + "kb");
         }
 
 
@@ -157,7 +202,7 @@ namespace CDS002.IEnumerableWithGenericsDemo
             {
                 if (!this.disposedValue)
                 {
-                    if (disposing) { } // 析构所需要的资源
+                    if (disposing){  } // 析构所需要的资源
                     _current = null;
                     if (_sr != null)
                     {
