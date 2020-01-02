@@ -1,0 +1,6 @@
+F:\编程\vs2015代码\ChikenCTS\算法\Cards\Cards\bin\Debug\Cards.exe.config
+F:\编程\vs2015代码\ChikenCTS\算法\Cards\Cards\bin\Debug\Cards.exe
+F:\编程\vs2015代码\ChikenCTS\算法\Cards\Cards\bin\Debug\Cards.pdb
+F:\编程\vs2015代码\ChikenCTS\算法\Cards\Cards\obj\Debug\Cards.csprojResolveAssemblyReference.cache
+F:\编程\vs2015代码\ChikenCTS\算法\Cards\Cards\obj\Debug\Cards.exe
+F:\编程\vs2015代码\ChikenCTS\算法\Cards\Cards\obj\Debug\Cards.pdb
