@@ -1,0 +1,11 @@
+C:\Users\Dr.王马小吉\Documents\GitHub\DataStructuresAndAlgorithm\DataStructuresAndAlgorithm\DS02.AI\bin\Debug\netcoreapp3.0\DS02.AI.exe
+C:\Users\Dr.王马小吉\Documents\GitHub\DataStructuresAndAlgorithm\DataStructuresAndAlgorithm\DS02.AI\bin\Debug\netcoreapp3.0\DS02.AI.deps.json
+C:\Users\Dr.王马小吉\Documents\GitHub\DataStructuresAndAlgorithm\DataStructuresAndAlgorithm\DS02.AI\bin\Debug\netcoreapp3.0\DS02.AI.runtimeconfig.json
+C:\Users\Dr.王马小吉\Documents\GitHub\DataStructuresAndAlgorithm\DataStructuresAndAlgorithm\DS02.AI\bin\Debug\netcoreapp3.0\DS02.AI.runtimeconfig.dev.json
+C:\Users\Dr.王马小吉\Documents\GitHub\DataStructuresAndAlgorithm\DataStructuresAndAlgorithm\DS02.AI\bin\Debug\netcoreapp3.0\DS02.AI.dll
+C:\Users\Dr.王马小吉\Documents\GitHub\DataStructuresAndAlgorithm\DataStructuresAndAlgorithm\DS02.AI\bin\Debug\netcoreapp3.0\DS02.AI.pdb
+C:\Users\Dr.王马小吉\Documents\GitHub\DataStructuresAndAlgorithm\DataStructuresAndAlgorithm\DS02.AI\obj\Debug\netcoreapp3.0\DS02.AI.csprojAssemblyReference.cache
+C:\Users\Dr.王马小吉\Documents\GitHub\DataStructuresAndAlgorithm\DataStructuresAndAlgorithm\DS02.AI\obj\Debug\netcoreapp3.0\DS02.AI.AssemblyInfoInputs.cache
+C:\Users\Dr.王马小吉\Documents\GitHub\DataStructuresAndAlgorithm\DataStructuresAndAlgorithm\DS02.AI\obj\Debug\netcoreapp3.0\DS02.AI.AssemblyInfo.cs
+C:\Users\Dr.王马小吉\Documents\GitHub\DataStructuresAndAlgorithm\DataStructuresAndAlgorithm\DS02.AI\obj\Debug\netcoreapp3.0\DS02.AI.dll
+C:\Users\Dr.王马小吉\Documents\GitHub\DataStructuresAndAlgorithm\DataStructuresAndAlgorithm\DS02.AI\obj\Debug\netcoreapp3.0\DS02.AI.pdb

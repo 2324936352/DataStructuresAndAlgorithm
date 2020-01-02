@@ -1,0 +1,13 @@
+F:\陈华龙\mvc\SourceCode\Poker\Poker\bin\Debug\Poker.exe.config
+F:\陈华龙\mvc\SourceCode\Poker\Poker\bin\Debug\Poker.exe
+F:\陈华龙\mvc\SourceCode\Poker\Poker\bin\Debug\Poker.pdb
+F:\陈华龙\mvc\SourceCode\Poker\Poker\obj\Debug\Poker.csprojAssemblyReference.cache
+F:\陈华龙\mvc\SourceCode\Poker\Poker\obj\Debug\Poker.csproj.CoreCompileInputs.cache
+F:\陈华龙\mvc\SourceCode\Poker\Poker\obj\Debug\Poker.exe
+F:\陈华龙\mvc\SourceCode\Poker\Poker\obj\Debug\Poker.pdb
+C:\Users\Dr.王马小吉\Desktop\Poker\Poker\bin\Debug\Poker.exe.config
+C:\Users\Dr.王马小吉\Desktop\Poker\Poker\bin\Debug\Poker.exe
+C:\Users\Dr.王马小吉\Desktop\Poker\Poker\bin\Debug\Poker.pdb
+C:\Users\Dr.王马小吉\Desktop\Poker\Poker\obj\Debug\Poker.csprojAssemblyReference.cache
+C:\Users\Dr.王马小吉\Desktop\Poker\Poker\obj\Debug\Poker.exe
+C:\Users\Dr.王马小吉\Desktop\Poker\Poker\obj\Debug\Poker.pdb
