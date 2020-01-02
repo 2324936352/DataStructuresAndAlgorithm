@@ -1,0 +1,5 @@
+F:\编程\vs2015代码\ChikenCTS\算法\CuntChicken\CuntChicken\bin\Debug\CuntChicken.exe.config
+F:\编程\vs2015代码\ChikenCTS\算法\CuntChicken\CuntChicken\bin\Debug\CuntChicken.exe
+F:\编程\vs2015代码\ChikenCTS\算法\CuntChicken\CuntChicken\bin\Debug\CuntChicken.pdb
+F:\编程\vs2015代码\ChikenCTS\算法\CuntChicken\CuntChicken\obj\Debug\CuntChicken.exe
+F:\编程\vs2015代码\ChikenCTS\算法\CuntChicken\CuntChicken\obj\Debug\CuntChicken.pdb
